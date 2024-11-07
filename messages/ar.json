@@ -1,0 +1,23 @@
+{
+    "HomePage": {
+        "title": "مرحبا بالعالم!",
+        "about": " الذهاب إلى صفحة المعلومات"
+    },
+    "Navbar": {
+        "login": "الدخول",
+        "logout": "الخروج",
+        "register": "حساب جديد"
+    },
+    "LocaleSwitcher": {
+        "label": "تغيير اللغة",
+        "locale": "{locale, select, ar {عربي} en {English} other {غير معروف}}"
+    },
+    "Language": {
+        "english": "الانجليزية",
+        "arabic": "العربية",
+        "change_language": "تغيير اللغة: {lang}",
+        "select_language": "اختر اللغة",
+        "change_to_english": "تغيير اللغة إلى الانجليزية",
+        "change_to_arabic": "تغيير اللغة إلى العربية"
+    }
+}

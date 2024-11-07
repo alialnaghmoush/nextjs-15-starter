@@ -1,0 +1,23 @@
+{
+    "HomePage": {
+        "title": "Hello world!",
+        "about": "Go to the about page"
+    },
+    "Navbar": {
+        "login": "Login",
+        "logout": "Logout",
+        "register": "Register"
+    },
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, ar {Arabic} en {English} other {Unknown}}"
+    },
+    "Language": {
+        "english": "English",
+        "arabic": "Arabic",
+        "change_language": "Change Language: {lang}",
+        "select_language": "Select Language",
+        "change_to_english": "Change to English",
+        "change_to_arabic": "Change to Arabic"
+    }
+}
