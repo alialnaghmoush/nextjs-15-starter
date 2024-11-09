@@ -1,6 +1,6 @@
 import { NextLogo } from "@/components/global/next-logo";
-import { ToggleLocale } from "@/components/global/toggle-locale";
-import { ToggleMode } from "@/components/global/toggle-mode";
+// import { ToggleLocale } from "@/components/global/toggle-locale";
+// import { ToggleMode } from "@/components/global/toggle-mode";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
@@ -17,13 +17,16 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex flex-row gap-2">
-          <ToggleMode />
-          <ToggleLocale />
+          {/* <ToggleMode />
+          <ToggleLocale /> */}
           <Button variant="outline">
             <Link href="#">{t('login')}</Link>
           </Button>
-          <Button variant="default">
+          <Button variant="outline">
             <Link href="#">{t('register')}</Link>
+          </Button>
+          <Button variant="default">
+            <Link href="/dashboard">{t('dashboard')}</Link>
           </Button>
         </div>
       </header>

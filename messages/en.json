@@ -6,7 +6,8 @@
     "Navbar": {
         "login": "Login",
         "logout": "Logout",
-        "register": "Register"
+        "register": "Register",
+        "dashboard": "Dashboard"
     },
     "LocaleSwitcher": {
         "label": "Change language",

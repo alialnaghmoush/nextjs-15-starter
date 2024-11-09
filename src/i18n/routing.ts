@@ -1,5 +1,6 @@
 import { defineRouting } from 'next-intl/routing';
 import { createNavigation } from 'next-intl/navigation';
+import { isRtlLang } from 'rtl-detect';
 
 export const routing = defineRouting({
     // A list of all locales that are supported
@@ -15,13 +16,8 @@ export const routing = defineRouting({
 export const { Link, redirect, usePathname, useRouter } = createNavigation(routing);
 
 
-/**
- * Determines the text direction (left-to-right or right-to-left) based on the provided locale.
- * @param locale - The locale to determine the text direction for.
- * @returns The text direction, either "rtl" for right-to-left or "ltr" for left-to-right.
- */
-export const localeDir = (locale: string) => locale === "ar" ? "rtl" : "ltr";
-
+export const isRtl = (locale: string) => isRtlLang(locale);
+export const sideDir = (locale: string) => isRtl(locale) ? "right" : "left";
 /**
  * The type of a locale supported by the application.
  */

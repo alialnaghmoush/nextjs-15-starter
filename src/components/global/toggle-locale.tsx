@@ -19,3 +19,9 @@ export function ToggleLocale() {
     )
 }
 
+export function toggleLocales() {
+    const pathname = usePathname()
+    const router = useRouter()
+    const locale = useLocale() === 'en' ? 'ar' : 'en'
+    return () => router.replace(pathname, { locale })
+}

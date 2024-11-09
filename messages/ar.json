@@ -6,7 +6,8 @@
     "Navbar": {
         "login": "الدخول",
         "logout": "الخروج",
-        "register": "حساب جديد"
+        "register": "حساب جديد",
+        "dashboard": "لوحة التحكم"
     },
     "LocaleSwitcher": {
         "label": "تغيير اللغة",

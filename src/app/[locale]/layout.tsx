@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
+import { getLangDir } from "rtl-detect";
 import { fontSans } from "@/lib/fonts";
+import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
 
 import "../globals.css";
-import { getMessages } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
-import { localeDir } from "@/i18n/routing";
+
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Next Start Kit",
+    title: "Next.js Start Kit",
     description: "NextJs v15 + ShadCN + Drizzle + Next Intl + Next Themes",
-    // openGraph: { locale },
   }
 }
 
@@ -24,12 +24,15 @@ type RootLayoutProps = {
 export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
   const messages = await getMessages();
+  const direction = getLangDir(locale);
 
   return (
-    <html lang={locale} dir={localeDir(locale)} suppressHydrationWarning>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
+          <ThemeProvider attribute="class">
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
