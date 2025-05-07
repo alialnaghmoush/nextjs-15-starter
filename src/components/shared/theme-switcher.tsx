@@ -24,17 +24,17 @@ export const ThemeSwitcher = () => {
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="start">
                 <DropdownMenuItem onClick={() => setTheme("light")}>
-                    <Sun className="mr-2 h-4 w-4" />
+                    <Sun className="h-4 w-4" />
                     <span>{content.light}</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    <Moon className="mr-2 h-4 w-4" />
+                    <Moon className="h-4 w-4" />
                     <span>{content.dark}</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("system")}>
-                    <Laptop className="mr-2 h-4 w-4" />
+                    <Laptop className="h-4 w-4" />
                     <span>{content.system}</span>
                 </DropdownMenuItem>
             </DropdownMenuContent>

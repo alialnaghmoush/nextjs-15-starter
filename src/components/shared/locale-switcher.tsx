@@ -27,7 +27,7 @@ export const LocaleSwitcher = () => {
                     <span className="sr-only">Switch language</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="start">
                 {availableLocales.map((localeItem) => (
                     <DropdownMenuItem key={localeItem} asChild>
                         <Link
