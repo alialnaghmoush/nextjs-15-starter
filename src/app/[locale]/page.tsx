@@ -49,7 +49,7 @@ const PageContent = () => {
             .
           </li>
           <li className="tracking-[-.01em]">
-            {content.save} <b>{content.save}</b>
+            {content.save}
           </li>
         </ol>
 

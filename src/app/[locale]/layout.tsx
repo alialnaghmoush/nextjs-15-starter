@@ -13,13 +13,13 @@ const LocaleLayout: NextLayoutIntlayer = async ({ children, params }) => {
     return (
         <html lang={locale} dir={getHTMLTextDir(locale)} suppressHydrationWarning>
             <body className={cn("bg-background font-sans antialiased", fontSans.variable)}>
-                <IntlayerClientProvider locale={locale}>
-                    <ThemeProvider attribute="class">
+                <ThemeProvider attribute="class">
+                    <IntlayerClientProvider locale={locale}>
                         <RedixProvider dir={getDir(locale)}>
                             {children}
                         </RedixProvider>
-                    </ThemeProvider>
-                </IntlayerClientProvider>
+                    </IntlayerClientProvider>
+                </ThemeProvider>
             </body>
         </html >
     );
