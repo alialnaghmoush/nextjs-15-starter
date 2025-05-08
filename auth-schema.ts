@@ -8,6 +8,10 @@ export const users = pgTable("users", {
 	image: text('image'),
 	createdAt: timestamp('created_at').notNull(),
 	updatedAt: timestamp('updated_at').notNull(),
+	role: text('role'),
+	banned: boolean('banned'),
+	banReason: text('ban_reason'),
+	banExpires: timestamp('ban_expires'),
 	local_name: text('local_name'),
 	lang: text('lang')
 });
@@ -20,7 +24,8 @@ export const sessions = pgTable("sessions", {
 	updatedAt: timestamp('updated_at').notNull(),
 	ipAddress: text('ip_address'),
 	userAgent: text('user_agent'),
-	userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' })
+	userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+	impersonatedBy: text('impersonated_by')
 });
 
 export const accounts = pgTable("accounts", {
@@ -48,4 +53,9 @@ export const verifications = pgTable("verifications", {
 	updatedAt: timestamp('updated_at')
 });
 
-
+export const jwkss = pgTable("jwkss", {
+	id: text('id').primaryKey(),
+	publicKey: text('public_key').notNull(),
+	privateKey: text('private_key').notNull(),
+	createdAt: timestamp('created_at').notNull()
+});

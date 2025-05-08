@@ -1,6 +1,6 @@
 {
   "name": "nextjs-15-starter",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,9 @@
     "lint": "next lint",
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "ba:generate": "@better-auth/cli generate"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
